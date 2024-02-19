@@ -13,3 +13,15 @@ RUN set -ex && \
 ENV HOME_DIR /home/develop
 
 WORKDIR ${HOME_DIR}
+
+# Install Google Test
+RUN set -ex && \
+    apt-get update && \
+    apt-get install -y \
+        googletest \
+        g++ && \
+    cd /usr/src/googletest && \
+    mkdir build && \
+    cd build && \
+    cmake .. && \
+    make install
