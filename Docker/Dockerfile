@@ -6,6 +6,7 @@ RUN set -ex && \
     apt-get update && \
     apt-get install -y \
         cmake \
+        curl \
         git \
         mercurial \
         shellcheck
