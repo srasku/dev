@@ -37,3 +37,7 @@ RUN git clone https://github.com/neovim/neovim.git && \
     make CMAKE_BUILD_TYPE=RelWithDebInfo && \
     make install && \
     rm -rf /home/develop/neovim
+
+ENV XDG_CONFIG_HOME /config
+
+COPY config-nvim ${XDG_CONFIG_HOME}/nvim
