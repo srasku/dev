@@ -39,5 +39,6 @@ RUN git clone https://github.com/neovim/neovim.git && \
     rm -rf /home/develop/neovim
 
 ENV XDG_CONFIG_HOME /config
+ENV XDG_DATA_HOME ${HOME_DIR}/.local
 
 COPY config-nvim ${XDG_CONFIG_HOME}/nvim
